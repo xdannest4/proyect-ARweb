@@ -1,5 +1,7 @@
 document.querySelector("a-scene").addEventListener("loaded", function () {
 
+  console.log("URL:", window.location.href);
+
   const params = new URLSearchParams(window.location.search);
   let producto = params.get("producto");
 
@@ -12,6 +14,7 @@ document.querySelector("a-scene").addEventListener("loaded", function () {
   };
 
   const modelo = document.querySelector("#modelo");
+  console.log("Elemento modelo:", modelo);
 
   if (modelo && modelosDisponibles[producto]) {
     modelo.setAttribute("gltf-model", modelosDisponibles[producto]);
