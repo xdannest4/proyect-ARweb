@@ -15,7 +15,7 @@ window.onload = function () {
 
   const modelosDisponibles = {
     lechuga: "models/Lechuga.glb",
-    plato: "models/mesa.glb",
+    plato: "models/plato_nuevo.glb",
   };
 
   if (modelosDisponibles[producto]) {
