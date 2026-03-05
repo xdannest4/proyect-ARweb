@@ -8,7 +8,7 @@ window.onload = function () {
   const modelosDisponibles = {
     lechuga: "assets/Lechuga.glb",
     platoN: "assets/plato_nuevo.glb",
-    cuboTest: "assets/Cube_Test.glb"
+    plato2: "assets/platoop.glb"
   };
 
   if (modelosDisponibles[producto]) {
