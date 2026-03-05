@@ -1,23 +1,20 @@
-document.querySelector("a-scene").addEventListener("loaded", function () {
-
-  console.log("URL:", window.location.href);
+window.onload = function () {
 
   const params = new URLSearchParams(window.location.search);
-  let producto = params.get("producto");
+  const producto = params.get("producto");
 
-  if (!producto) producto = "lechuga";
-  producto = producto.toLowerCase();
+  const modelo = document.getElementById("modelo");
 
   const modelosDisponibles = {
     lechuga: "assets/Lechuga.glb",
-    plato: "assets/plato_nuevo.glb",
+    platoN: "assets/plato_nuevo.glb",
+    cuboTest: "assets/Cube_Test.glb"
   };
 
-  const modelo = document.querySelector("#modelo");
-  console.log("Elemento modelo:", modelo);
-
-  if (modelo && modelosDisponibles[producto]) {
+  if (modelosDisponibles[producto]) {
     modelo.setAttribute("gltf-model", modelosDisponibles[producto]);
+  } else {
+    modelo.setAttribute("gltf-model", "assets/Lechuga.glb"); // default
   }
 
-});
+};
